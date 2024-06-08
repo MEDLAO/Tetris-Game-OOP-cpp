@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF327FE12C139BFB0029CDFA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF327FE02C139BFB0029CDFA /* main.cpp */; };
+		BF327FE92C14A7610029CDFA /* libraylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF327FE82C14A7610029CDFA /* libraylib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		BF327FDD2C139BFB0029CDFA /* Tetris-Game-OOP-C++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Tetris-Game-OOP-C++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF327FE02C139BFB0029CDFA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BF327FE82C14A7610029CDFA /* libraylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libraylib.a; path = ../../../../../usr/local/Cellar/raylib/5.0/lib/libraylib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF327FE92C14A7610029CDFA /* libraylib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 			children = (
 				BF327FDF2C139BFB0029CDFA /* Tetris-Game-OOP-C++ */,
 				BF327FDE2C139BFB0029CDFA /* Products */,
+				BF327FE72C14A7610029CDFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +64,14 @@
 				BF327FE02C139BFB0029CDFA /* main.cpp */,
 			);
 			path = "Tetris-Game-OOP-C++";
+			sourceTree = "<group>";
+		};
+		BF327FE72C14A7610029CDFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF327FE82C14A7610029CDFA /* libraylib.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +257,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/raylib/5.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -253,6 +270,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/raylib/5.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
