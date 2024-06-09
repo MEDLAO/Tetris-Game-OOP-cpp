@@ -6,24 +6,30 @@
 //
 
 #include <iostream>
-#include "raylib.h"
+#include <raylib.h>
+#include "grid.hpp"
+#include "blocks.cpp"
 
-int main(int argc, const char * argv[]) {
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+
+int main()
+{
+    Color darkblue = {44, 44, 127, 255};
+    InitWindow(300, 600, "Raylib Tetris");
+    SetTargetFPS(60); // 60 frames per second
     
-    InitWindow(screenWidth, screenHeight, "Raylib Example");
+    Grid grid = Grid();
+    grid.print();
     
-    SetTargetFPS(60);
+    TBlock block = TBlock();
     
-    while (!WindowShouldClose()){
+    while (WindowShouldClose() == false) {
         BeginDrawing();
-        ClearBackground(RAYWHITE);
-        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+        ClearBackground(darkblue);
+        grid.draw();
+        block.draw();
         EndDrawing();
     }
     
     CloseWindow();
     
-    return 0;
 }
