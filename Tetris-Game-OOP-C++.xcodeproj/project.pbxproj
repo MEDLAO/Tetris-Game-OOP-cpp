@@ -14,6 +14,7 @@
 		BF327FF52C15E8C10029CDFA /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF327FF32C15E8C10029CDFA /* position.cpp */; };
 		BF327FF82C15EFB10029CDFA /* colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF327FF62C15EFB10029CDFA /* colors.cpp */; };
 		BF327FFB2C15FE6E0029CDFA /* blocks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF327FF92C15FE6E0029CDFA /* blocks.cpp */; };
+		BF9449382C188D1F009930BA /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF9449362C188D1F009930BA /* game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,8 @@
 		BF327FF72C15EFB10029CDFA /* colors.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = colors.hpp; sourceTree = "<group>"; };
 		BF327FF92C15FE6E0029CDFA /* blocks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = blocks.cpp; sourceTree = "<group>"; };
 		BF327FFA2C15FE6E0029CDFA /* blocks.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = blocks.hpp; sourceTree = "<group>"; };
+		BF9449362C188D1F009930BA /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		BF9449372C188D1F009930BA /* game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				BF327FF72C15EFB10029CDFA /* colors.hpp */,
 				BF327FF92C15FE6E0029CDFA /* blocks.cpp */,
 				BF327FFA2C15FE6E0029CDFA /* blocks.hpp */,
+				BF9449362C188D1F009930BA /* game.cpp */,
+				BF9449372C188D1F009930BA /* game.hpp */,
 			);
 			path = "Tetris-Game-OOP-C++";
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			files = (
 				BF327FF82C15EFB10029CDFA /* colors.cpp in Sources */,
 				BF327FE12C139BFB0029CDFA /* main.cpp in Sources */,
+				BF9449382C188D1F009930BA /* game.cpp in Sources */,
 				BF327FEF2C14DF9D0029CDFA /* grid.cpp in Sources */,
 				BF327FF52C15E8C10029CDFA /* position.cpp in Sources */,
 				BF327FF22C15E7AC0029CDFA /* block.cpp in Sources */,

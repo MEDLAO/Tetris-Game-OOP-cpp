@@ -7,8 +7,7 @@
 
 #include <iostream>
 #include <raylib.h>
-#include "grid.hpp"
-#include "blocks.cpp"
+#include "game.hpp"
 
 
 int main()
@@ -17,16 +16,13 @@ int main()
     InitWindow(300, 600, "Raylib Tetris");
     SetTargetFPS(60); // 60 frames per second
     
-    Grid grid = Grid();
-    grid.print();
-    
-    TBlock block = TBlock();
+    Game game = Game();
     
     while (WindowShouldClose() == false) {
+        game.handleInput();
         BeginDrawing();
         ClearBackground(darkblue);
-        grid.draw();
-        block.draw();
+        game.draw();
         EndDrawing();
     }
     
