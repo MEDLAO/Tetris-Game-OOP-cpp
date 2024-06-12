@@ -51,6 +51,9 @@ void Game::handleInput()
         case KEY_DOWN:
             moveBlockDown();
             break;
+        case KEY_UP:
+            rotateBlock();
+            break;
     }
 }
 
@@ -92,3 +95,11 @@ bool Game::isBlockOutside()
     return false;
 }
 
+void Game::rotateBlock()
+{
+    currentBlock.rotate();
+    if(isBlockOutside())
+    {
+        currentBlock.undoRotation();
+    }
+}
