@@ -10,6 +10,19 @@
 #include "game.hpp"
 
 
+double lastUpdateTime = 0;
+
+double eventTriggered(double interval)
+{
+    double currentTime = GetTime();
+    if (currentTime - lastUpdateTime >= interval) {
+        
+        lastUpdateTime = currentTime;
+        return true;
+    }
+    return false;
+}
+
 int main()
 {
     Color darkblue = {44, 44, 127, 255};
@@ -20,6 +33,9 @@ int main()
     
     while (WindowShouldClose() == false) {
         game.handleInput();
+        if (eventTriggered(0.2)) {
+            game.moveBlockDown();
+        }
         BeginDrawing();
         ClearBackground(darkblue);
         game.draw();
