@@ -24,12 +24,14 @@ public:
     void moveBlockRight();
     void moveBlockDown();
     Grid grid;
+    bool gameOver;
     
 private:
     bool isBlockOutside();
     void rotateBlock();
     void lockBlock();
     bool blockFits();
+    void reset();
     std::vector<Block> blocks;
     Block currentBlock;
     Block nextBlock;
