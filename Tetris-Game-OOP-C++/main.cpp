@@ -26,7 +26,7 @@ double eventTriggered(double interval)
 int main()
 {
     Color darkblue = {44, 44, 127, 255};
-    InitWindow(300, 600, "Raylib Tetris");
+    InitWindow(500, 620, "Raylib Tetris");
     SetTargetFPS(60); // 60 frames per second
     
     Game game = Game();
