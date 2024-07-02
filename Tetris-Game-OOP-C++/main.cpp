@@ -8,6 +8,7 @@
 #include <iostream>
 #include <raylib.h>
 #include "game.hpp"
+#include "colors.hpp"
 
 
 double lastUpdateTime = 0;
@@ -25,9 +26,10 @@ double eventTriggered(double interval)
 
 int main()
 {
-    Color darkblue = {44, 44, 127, 255};
     InitWindow(500, 620, "Raylib Tetris");
     SetTargetFPS(60); // 60 frames per second
+    
+    Font font = LoadFontEx("Font/monogram.ttf", 64, 0, 0);
     
     Game game = Game();
     
@@ -37,7 +39,15 @@ int main()
             game.moveBlockDown();
         }
         BeginDrawing();
-        ClearBackground(darkblue);
+        ClearBackground(darkBlue);
+        DrawTextEx(font, "Score", {365, 15}, 38, 2, WHITE);
+        DrawTextEx(font, "Next", {370, 175}, 38, 2, WHITE);
+        if(game.gameOver)
+        {
+            DrawTextEx(font, "GAME OVER", {320, 450}, 30, 2, WHITE);
+        }
+        DrawRectangleRounded({320, 55, 170, 60}, 0.3, 6, lightBlue);
+        DrawRectangleRounded({320, 215, 170, 180}, 0.3, 6, lightBlue);
         game.draw();
         EndDrawing();
     }
