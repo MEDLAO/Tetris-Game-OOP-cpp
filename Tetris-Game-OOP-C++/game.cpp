@@ -7,6 +7,8 @@
 
 #include "game.hpp"
 #include <random>
+#include <iostream>
+#include <unistd.h>
 
 Game::Game()
 {
@@ -15,6 +17,29 @@ Game::Game()
     currentBlock = getRandomBlock();
     nextBlock = getRandomBlock();
     gameOver = false;
+    score = 0;
+    InitAudioDevice();
+    
+    // Print the current working directory
+    char cwd[1024];
+    if (getcwd(cwd, sizeof(cwd)) != NULL) {
+        std::cout << "Current working directory: " << cwd << std::endl;
+    } else {
+        perror("getcwd() error");
+    }
+    music = LoadMusicStream("music.mp3");
+    
+    PlayMusicStream(music);
+    rotateSound = LoadSound("rotate.mp3");
+    clearSound = LoadSound("clear.mp3");
+}
+
+Game::~Game()
+{
+    UnloadSound(rotateSound);
+    UnloadSound(clearSound);
+    UnloadMusicStream(music);
+    CloseAudioDevice();
 }
 
 Block Game::getRandomBlock()
@@ -135,6 +160,10 @@ void Game::rotateBlock()
         {
             currentBlock.undoRotation();
         }
+        else
+        {
+            PlaySound(rotateSound);
+        }
     }
 }
 
@@ -151,7 +180,11 @@ void Game::lockBlock()
     }
     nextBlock = getRandomBlock();
     int rowsCleared = grid.clearFullRows();
-    updateScore(rowsCleared, 0);
+    if(rowsCleared > 0)
+    {
+        PlaySound(clearSound);
+        updateScore(rowsCleared, 0);
+    }
 }
 
 bool Game::blockFits()

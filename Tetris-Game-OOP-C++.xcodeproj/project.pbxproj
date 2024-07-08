@@ -17,19 +17,9 @@
 		BF9449382C188D1F009930BA /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF9449362C188D1F009930BA /* game.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		BF327FDB2C139BFB0029CDFA /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		BF2A43882C3C659400EC75F1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BF2A43892C3C671800EC75F1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		BF327FDD2C139BFB0029CDFA /* Tetris-Game-OOP-C++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Tetris-Game-OOP-C++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF327FE02C139BFB0029CDFA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BF327FE82C14A7610029CDFA /* libraylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libraylib.a; path = ../../../../../usr/local/Cellar/raylib/5.0/lib/libraylib.a; sourceTree = "<group>"; };
@@ -43,7 +33,7 @@
 		BF327FF72C15EFB10029CDFA /* colors.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = colors.hpp; sourceTree = "<group>"; };
 		BF327FF92C15FE6E0029CDFA /* blocks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = blocks.cpp; sourceTree = "<group>"; };
 		BF327FFA2C15FE6E0029CDFA /* blocks.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = blocks.hpp; sourceTree = "<group>"; };
-		BF9449362C188D1F009930BA /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		BF9449362C188D1F009930BA /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = game.cpp; path = "../../../../../../../../Documents/C++_projects/Tetris-Game-OOP-C++/Tetris-Game-OOP-C++/game.cpp"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9449372C188D1F009930BA /* game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +52,8 @@
 		BF327FD42C139BFB0029CDFA = {
 			isa = PBXGroup;
 			children = (
+				BF2A43882C3C659400EC75F1 /* README.md */,
+				BF2A43892C3C671800EC75F1 /* Media.xcassets */,
 				BF327FDF2C139BFB0029CDFA /* Tetris-Game-OOP-C++ */,
 				BF327FDE2C139BFB0029CDFA /* Products */,
 				BF327FE72C14A7610029CDFA /* Frameworks */,
@@ -74,7 +66,8 @@
 				BF327FDD2C139BFB0029CDFA /* Tetris-Game-OOP-C++ */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			path = "../../../../../../../../Documents/C++_projects/Tetris-Game-OOP-C++";
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		BF327FDF2C139BFB0029CDFA /* Tetris-Game-OOP-C++ */ = {
 			isa = PBXGroup;
@@ -113,7 +106,6 @@
 			buildPhases = (
 				BF327FD92C139BFB0029CDFA /* Sources */,
 				BF327FDA2C139BFB0029CDFA /* Frameworks */,
-				BF327FDB2C139BFB0029CDFA /* CopyFiles */,
 			);
 			buildRules = (
 			);

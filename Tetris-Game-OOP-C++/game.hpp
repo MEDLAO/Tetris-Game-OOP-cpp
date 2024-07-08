@@ -16,11 +16,13 @@ class Game
 {
 public:
     Game();
+    ~Game();
     void draw();
     void handleInput();
     void moveBlockDown();
     bool gameOver;
     int score;
+    Music music;
     
 private:
     Block getRandomBlock();
@@ -37,6 +39,8 @@ private:
     std::vector<Block> blocks;
     Block currentBlock;
     Block nextBlock;
+    Sound rotateSound;
+    Sound clearSound;
 };
 
 #endif /* game_hpp */
